@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.0.M5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.filichkin.blog</groupId>
+	<artifactId>r2dbc-vs-jdbc</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>r2dbc-vs-jdbc</name>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>11</java.version>
+		<spring-data-r2dbc.version>1.0.0.M1</spring-data-r2dbc.version>
+		<r2dbc-postgresql.version>1.0.0.M7</r2dbc-postgresql.version>
+		<r2dbc-pool.version>0.8.0.M8</r2dbc-pool.version>
+		<r2dbc-spi.version>0.8.0.M8</r2dbc-spi.version>
+	</properties>
+
+	<modules>
+		<module>jdbc-service</module>
+		<module>r2dbc-service</module>
+	</modules>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>

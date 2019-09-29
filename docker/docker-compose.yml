@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  postgres11.6:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      PGPORT: 5432
+    ports:
+      - 5432:5432
+    command: postgres -c 'max_connections=1200'
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+

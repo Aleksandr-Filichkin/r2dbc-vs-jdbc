@@ -1,0 +1,24 @@
+ POST http://localhost:8080/blocking/user
+Content-Type: application/json
+
+{
+"name": "Alex",
+"surname": "Filichkin",
+"email": "filia.aleks@gmail.com"
+}
+
+<> 2019-09-03T050955.201.json
+<> 2019-09-02T021536.201.json
+
+###
+
+ POST http://localhost:8080/reactive/user
+Content-Type: application/json
+
+{
+  "name": "Alex",
+  "surname": "Filichkin",
+  "email": "filia.aleks@gmail.com"
+}
+
+###
