@@ -1,6 +1,6 @@
-version: '3.1'
+version: '3.5'
 services:
-  postgres11.6:
+  postgres11:
     build:
       context: ..
       dockerfile: docker/Dockerfile
@@ -12,5 +12,4 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.3'
-
+          cpus: '1.0'

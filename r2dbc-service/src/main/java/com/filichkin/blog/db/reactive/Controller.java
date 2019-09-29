@@ -1,6 +1,7 @@
 package com.filichkin.blog.db.reactive;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,11 @@ public class Controller {
     public Mono<User> add(@RequestBody User user) {
         user.setCreated(Instant.now());
         return userRepository.save(user);
+    }
+
+    @DeleteMapping("user/{id}")
+    public Mono<Void> delete(@PathVariable long id) {
+        return userRepository.deleteById(id);
     }
 
     @GetMapping("users")
